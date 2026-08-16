@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Pokémon Are You? Pokémon personality quiz</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            yellow: {
+              400: '#facc15',
+              500: '#eab308'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="icon" href="favicon.ico" />
+</head>
+
+<body class="min-h-screen font-sans bg-black">
+
+  <!-- Full page hero container -->
+  <div class="relative min-h-screen">
+
+    <!-- Background image -->
+    <div
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style="
+        background-image: url('Eevee.jpeg');
+        image-rendering: high-quality;
+        filter: contrast(1.08) saturate(1.15);
+      "
+    ></div>
+
+    <!-- Overlay layers (same as React version) -->
+    <div class="absolute inset-0 bg-black/35"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
+
+    <!-- Navbar -->
+    <nav class="relative z-20 flex items-center justify-between px-12 py-6 text-white">
+      <div class="flex items-center gap-3">
+        <img src="./favicon.ico" class="w-10 h-10" alt="Logo">
+        <span class="text-xl font-semibold">PersonalityLabs</span>
+      </div>
+
+      <ul class="flex gap-8 text-lg">
+        <li><a href="#" class="text-yellow-400 underline underline-offset-4">Home</a></li>
+        <li><a href="#" class="hover:text-white text-white/80 transition-colors">About</a></li>
+        <li><a href="#" class="hover:text-white text-white/80 transition-colors">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero content -->
+    <section class="relative z-20 flex flex-col items-start justify-center px-20 pt-16 pb-24 text-white" style="min-height: calc(100vh - 72px);">
+      <div class="max-w-sm">
+        <h1 class="text-4xl font-extrabold leading-[1.15] mb-5 whitespace-nowrap">
+          What <span class="text-yellow-400">Pokémon</span> Are You?
+        </h1>
+
+        <p class="text-white/85 text-[1.05rem] leading-relaxed mb-8">
+          Ever wondered what Pokémon you would be? Discover which Pokémon matches your unique personality best with this short and fun quiz!
+        </p>
+
+        <button class="flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 active:scale-95 text-black font-semibold text-base px-6 py-3.5 rounded-full transition-all shadow-xl shadow-yellow-500/25 focus:outline-none focus:ring-0">
+          Start Quiz
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M3 9h11M9.5 4.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black px-12 py-7 flex items-center justify-between text-white">
+    <div class="flex items-center gap-3">
+      <img src="./favicon.ico" class="w-10 h-10" alt="Logo">
+      <span class="text-xl font-semibold">PersonalityLabs</span>
+    </div>
+    <p class="text-gray-400 text-xs text-right leading-relaxed">
+      © 2025 PersonalityLabs. All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
